@@ -1,0 +1,835 @@
+@font-face {
+	font-family: MavenProRegular;
+	src: url(../fonts/MavenProRegular.eot); // для IE
+	src: local("#@^^%$"), // для предотвр. сбоя при загрузке шрифта с лок. комп.
+	url(../fonts/MavenProRegular.woff) format("woff"),
+	url(../fonts/MavenProRegular.ttf) format("truetype"),
+	url(../fonts/MavenProRegular.svg) format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: MavenProBold;
+	src: url(../fonts/MavenProBold.eot); // для IE
+	src: local("#@^^%$"), // для предотвр. сбоя при загрузке шрифта с лок. комп.
+	url(../fonts/MavenProBold.woff) format("woff"),
+	url(../fonts/MavenProBold.ttf) format("truetype"),
+	url(../fonts/MavenProBold.svg) format("svg");
+	font-weight: 800;
+	font-style: bold;
+}
+
+@font-face {
+	font-family: MavenProMedium;
+	src: url(../fonts/MavenProMedium.eot); // для IE
+	src: local("#@^^%$"), // для предотвр. сбоя при загрузке шрифта с лок. комп.
+	url(../fonts/MavenProMedium.woff) format("woff"),
+	url(../fonts/MavenProMedium.ttf) format("truetype"),
+	url(../fonts/MavenProMedium.svg) format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: JaneAusten;
+	src: url(../fonts/JaneAusten.eot); // для IE
+	src: local("#@^^%$"), // для предотвр. сбоя при загрузке шрифта с лок. комп.
+	url(../fonts/JaneAusten.woff) format("woff"),
+	url(../fonts/JaneAusten.ttf) format("truetype"),
+	url(../fonts/JaneAusten.svg) format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: OldStandard;
+	src: url(../fonts/OldStandard.eot); // для IE
+	src: local("#@^^%$"), // для предотвр. сбоя при загрузке шрифта с лок. комп.
+	url(../fonts/OldStandard.woff) format("woff"),
+	url(../fonts/OldStandard.ttf) format("truetype"),
+	url(../fonts/OldStandard.svg) format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+//Цвет плейсхолдера в формах для различных браузеров
+::-webkit-input-placeholder {color: #68756d;}
+::-moz-placeholder          {color: #68756d;}
+:-moz-placeholder           {color: #68756d;}
+:-ms-input-placeholder      {color: #68756d;}
+::-ms-input-placeholder     {color: #68756d;}
+
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+#bg	{
+	margin: 0px;
+	padding: 0px;
+	width: 1600px;
+	height: 3000px;
+	background: url(../img/pattern_3x3px.png) repeat #e3e8ca;
+	//border: 1px solid red;
+	//overflow-x: hidden;
+} 
+
+/*----------------- HEADER -----------------*/
+
+header {
+	height: 396px;
+	/* фоны перечисляются от ближнего(верхнего) к дальнему(нижнему) */
+	background: url(../img/pattern_3x3px.png) repeat,
+	url(../img/header-texture.png) no-repeat,
+	linear-gradient(to top, #d7f3c9 0%, #e3e8ca 10%, #afc4b8 100%);	
+}
+
+#logo {
+	background: url(../img/logo.png) no-repeat;
+	position: absolute;
+	left: 694px;
+	top: 74px;
+	width: 211px;
+	height: 94px;
+}
+
+.header-line {
+	position: absolute;
+	height: 1px;
+	border-top: 1px solid #728974;
+	border-bottom: 1px solid #728974;
+	background: rgba(255, 255, 255, 0.35);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+#header-upper-line {
+	left: 590px;
+	top: 195px;
+	width: 429px;
+}
+
+.nav {
+	position: relative;
+	left: 617px;
+	top: 216px;
+	clear: both;
+	list-style: none outside none;
+	padding: 0px;
+	margin: 0 0 4px 0px;
+	background: transparent url(../img/blank_4x1600px.png) center bottom no-repeat;
+}
+
+.nav > li {
+	display: inline-block;
+	position: relative; // точка отсчета для подменю,где position:absolute
+	cursor: pointer;
+}
+
+a.nav-item {
+	//display: block;
+	font-family: MavenProRegular;
+	font-size: 16px;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-shadow: 0.7px 0.7px 0 rgba(255, 255, 255, 0.69);
+	color: #3b3306;
+	padding: 10px 10px 5px 10px;
+}
+
+#nav-blog {
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0.02) 100%);
+	border-radius: 4px;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.34), inset 0 3px 9px rgba(0, 0, 0, 0.49);	
+	color: #f3f9e8;
+	text-shadow: 1.4px 1.4px 4px rgba(0, 0, 0, 0.44);
+}
+
+a.nav-item:hover {
+	font-weight: bold;
+	padding: 10px 10px 5px 10px;
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0.02) 100%);
+	border-radius: 4px;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.34), inset 0 3px 9px rgba(0, 0, 0, 0.49);
+}
+
+ul.nav-submenu {
+	position: absolute;
+	//display: none; //скрываем подменю навигации по сайту
+	left: -9999px; /* Скрываем подменю за экраном
+	Написано, чтод данный метод лучше, чем display:none. Но чем непонятно Х-) */
+	list-style: none outside none;
+	margin: 0 auto;
+	padding: 8px;
+	opacity:0; /* Устанавливаем начальное состояние прозрачности */
+	transition: opacity 0.5s ease-in 0s;
+	-webkit-transition: opacity 0.5s ease-in 0s; /* поддержка: Chrome до 26,Safari до 6.1, Android */
+	-o-transition: opacity 0.5s ease-in 0s; /* поддержка: Opera до версии 12.10 */
+	-moz-transition: opacity 0.5s ease-in 0s; /* поддержка: Firefox до версии 16 */
+}
+
+.dropdownContain { /* контейнер для подменю, т.е. промежуточный эл-т, "мостик" */
+/* подменю отстается ::hover при переводе курсора из меню в подменю */
+	position: absolute;
+	//border: dotted #C22 2px; 
+	width: 300px; /* размер примерно такой чтобы срабатывал ::hover */
+	height: 100px; /* размер примерно такой чтобы срабатывал ::hover */
+}
+
+li.nav-item:hover > .dropdownContain > ul.nav-submenu {
+	position: absolute;
+	//display: block; //показываем подменю при наведении мыши
+	left: 0;  /* Переносим подменю на экран при наведении мыши*/
+	opacity:1; /* Делаем непрозрачным */
+	white-space:nowrap; /* Останавливаем перенос текста и создаем многострочный выпадающий пункт */
+	top: 10px; //небольшой отступ подменю
+	background: url(../img/pattern_3x3px.png) repeat, white;
+	border: 1px solid rgba(171, 166, 146, 0.39);
+	border-radius: 4px;
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.26), inset 0 0 32px rgba(171, 166, 146, 0.22); 
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.26), inset 0 0 32px rgba(171, 166, 146, 0.22);
+	-moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.26), inset 0 0 32px rgba(171, 166, 146, 0.22);
+	z-index: 102;
+}
+
+li.nav-submenu-item {
+	height: 31px;
+	line-height: 31px;
+	background: url(../img/2line_sep_1x3px.png) bottom repeat-x;
+}
+
+li.nav-submenu-item:last-child {
+	background: none;
+}
+
+a.nav-submenu-item {
+	font-family: MavenProRegular;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #222;
+}
+
+li.nav-item:hover .nav-submenu a.nav-submenu-item:hover {
+	background-color: rgba(0, 0, 0, 0.08);
+	border-radius: 4px;
+}
+
+#header-bottom-line {
+	left: 590px;
+	top: 248px;
+	width: 429px;
+}
+
+.slider {
+position: absolute;
+left: 320px;
+top: 275px;
+width: 960px;
+height: 542px;
+background-color: rgba(0, 0, 0, 0.1);
+box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.18);
+-webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.18);
+-moz-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.18);
+z-index:100;
+}
+
+.next, .prev {
+	position: absolute;
+	left: -22px;
+	top: 221px;
+	width: 22px;
+	height: 38px;
+	display:block;
+	z-index:101;
+}
+
+.next {
+	left: 960px;
+}
+
+.slides_container {
+	width: 940px;
+	height: 480px;
+	overflow:hidden;
+	position:relative;
+	left: 10px;
+	top: 11px;
+	background-color: #f3f5e9;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.18);
+	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.18);
+	-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.18);
+	z-index: 101;
+}
+
+.pagination {
+	margin:30px auto 0;
+	width:100px;
+	list-style:none;
+}
+
+.pagination li {
+	float:left;
+	margin:0 1px;
+	list-style:none;
+}
+
+.pagination li a {
+	display:block;
+	width:12px;
+	height:0;
+	padding-top:12px;
+	background-image:url(../img/pagination.png);
+	background-position:0 0;
+	float:left;
+	overflow:hidden;
+}
+
+.pagination li.current a {
+	background-position:0 -12px;
+}
+
+/*----------------- MAIN -----------------*/
+
+.main {
+	position: absolute;
+	left: 320px;
+	top: 854px;
+	width: 526px;
+	background: url(../img/bg-posts_9x9px.png), white;
+	border: 1px solid rgba(171, 166, 146, 0.39);
+	border-radius: 12px;
+	box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.18), 0 1px 3px rgba(0, 0, 0, 0.33), inset 0 0 62px rgba(171, 166, 146, 0.22);
+	-webkit-box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.18), 0 1px 3px rgba(0, 0, 0, 0.33), inset 0 0 62px rgba(171, 166, 146, 0.22);
+	-moz-box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.18), 0 1px 3px rgba(0, 0, 0, 0.33), inset 0 0 62px rgba(171, 166, 146, 0.22);
+	padding: 30px 30px 0 30px;
+}
+ 
+.post {
+	display: block;
+	width: 526px;
+	background: url(../img/2line_sep_1x3px.png) top repeat-x;
+	margin: 0px;
+	padding: 0px;
+}
+
+.post::last-child {
+	background: url(../img/2line_sep_1x3px.png) bottom repeat-x;
+}
+
+.post-header {
+	font-family: OldStandard;
+	font-size: 29px;
+	font-weight: 700;
+	line-height: 32px;
+	text-transform: uppercase;
+	text-shadow: 1.4px 1.4px 0 rgba(171, 166, 146, 0.36);
+	color: #222;
+	padding: 30px 0px 0px 0px;
+	margin: 0px 0px 0px 42px;
+}
+
+.post-date {
+	//display: inline-block;
+	float: left;
+	position: relative;
+	left: 29px;
+	top: 18px;
+	text-shadow: -0.7px -0.7px 0 rgba(0, 0, 0, 0.24);
+	color: white;
+	width: 72px;
+	height: 59px;
+	background: url(../img/date.png);
+	margin: 0 0 0 -72px;
+	padding: 0px;
+}
+
+.post-day {
+	display: block;
+	font-family: OldStandard;
+	font-size: 30px;
+	font-weight: 700;
+	margin: -3px 23px 0px 13px;
+}
+
+.post-monthabbr {
+	display: block;
+	font-family: MavenProRegular;
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin: -12px 23px 8px 16px;
+}
+
+.post-postedby {
+	font-family: MavenProRegular;
+	font-size: 10px;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-shadow: 1.4px 1.4px 0 rgba(171, 166, 146, 0.18);
+  color: #222;
+  margin: 0px 0 20px 42px;
+  //background-color: rgba(0,255,0,0.5);
+}
+
+.postedby-span {
+	color: #858d63;
+}
+
+#postedby-margin {
+	margin-left: 16px;
+}
+
+.post-img-box {
+	width: 526px;
+	height: 178px;
+	background-color: #f3f5e9;
+	border: 1px solid #9d9a90;
+	box-shadow: 2.8px 2.8px 0 rgba(171, 166, 146, 0.5);
+	overflow: hidden;	
+}
+
+.post-text {
+	font-family: MavenProRegular;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 18px;
+	color: #222;
+	margin-bottom: 40px;
+}
+
+.post-tags {
+	font-family: MavenProRegular;
+	font-size: 10px;
+	font-weight: 400;
+	line-height: 18px;
+	height: 9px;
+	text-shadow: 1.4px 1.4px 0 rgba(171, 166, 146, 0.18);
+	color: #222;
+	text-transform: uppercase;
+	padding-bottom: 30px;
+	margin: 0px;
+}
+
+.post-tags-span {
+	color: #858d63;
+	text-transform: none; //посмотреть какие есть значения
+}
+
+.post-read-bttn {
+	float: right;
+	width: 128px;
+	height: 30px;
+	background: url(../img/continue.png);
+	border: 1px solid #6a6f52;
+	border-radius: 4px;
+	// Text style
+	text-shadow: -0.7px -0.7px 0 rgba(0, 0, 0, 0.23);
+	color: #fefefe;
+	font-family: MavenProRegular;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 18px;
+	margin-top: -35px;
+}
+
+div.nextprevpost-box {
+	height: 70px;
+	line-height: 70px;
+	//border: 1px dotted #f77;
+	background: url(../img/2line_sep_1x3px.png) top repeat-x;
+}
+
+.nextprevpost-box a {
+	//display: block;
+	//height: 60px;
+	//width: 130px;
+	text-decoration: none;
+	color: #858d63;
+	font-family: MavenProRegular;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.nextprevpost-box a:hover {
+	color: #4f4c25;
+	background: rgba(160,183,155,0.5);
+}
+
+.post-prev-page {
+	float: left;
+}
+
+.post-next-page {
+	float: right;
+}
+
+/*----------------- SIDEBAR -----------------*/
+
+.sidebar {
+	position: absolute;
+	left: 936px;
+	top: 854px;
+	width: 344px;
+}
+
+.search-input {
+	/* Style for "input text" */
+	width: 174px; //204-30=174px
+	height: 33px;
+	background: url(../img/Magnifying-Glass.png) 10px center no-repeat rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.51), inset 0 0 4px rgba(0, 0, 0, 0.22);
+	border-radius: 20px;
+  /* Text style for "Type and Search" */
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.46);
+  color: #68756d;
+  font-family: MavenProRegular;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 38px;
+  padding-left: 30px;
+  outline: none;
+}
+
+.search-button {
+	width: 131px;
+	height: 38px;
+	background-color: rgba(255, 255, 255, 0.1);
+	background-image: linear-gradient(to top, transparent 0%, rgba(255, 255, 255, 0.07) 100%);
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.18), inset 0 2px 0 rgba(255, 255, 255, 0.78);
+	border-radius: 20px;
+  /* Text style for "Search" */
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.81);
+  color: #66816b;
+  font-family: MavenProRegular;
+  font-size: 15px;
+  line-height: 39px;
+  margin: 0 auto;
+}
+
+.sidebar-description-header {
+	/* Text style for "About Me" */
+	//width: 126px;
+	//height: 19px;
+	text-shadow: 0.7px 0.7px 0 rgba(255, 255, 255, 0.82);
+	color: #4f4c25;
+	font-family: OldStandard;
+	font-size: 24px;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin: 18px 0 0 0;
+}
+
+.sidebar-description-box {
+	//margin-top: -15px;
+	position: relative;
+	top: -15px;
+}
+
+p.sidebar-description-ptext {
+	text-shadow: 0.7px 0.7px 0 rgba(255, 255, 255, 0.82);
+	font-family: MavenProRegular;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 18px;
+	color: #776f56;
+}
+
+.sidebar-description-readmore {
+/* Text style for "Read More" */
+  color: #588f6a;
+  text-decoration: none;
+  border-bottom: 1px dotted #588f6a;
+}
+
+img.sidebar-description-img {
+  position: relative;
+  float: right;
+	margin: 0px 5px 0px 0px;
+	border: 1px solid #7e7c74;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
+	//float - свойство для обтекания текстом, <img> д.б. внутри параграфа.
+}
+
+img.sidebar-img-ad {
+	display: inline-block;
+	position: relative;
+	margin: 0px;
+	border: 1px solid #7e7c74;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
+}
+
+.sidebar-tabs {
+  /* Style for "box" */
+  //position: relative;
+  width: 68px;
+  height: 31px;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-image: linear-gradient(to top, transparent 0%, rgba(255, 255, 255, 0.07) 100%);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  box-shadow: 0.7px 0.7px 1px rgba(0, 0, 0, 0.1), inset 0 2px 0 rgba(255, 255, 255, 0.78);
+  /* Text style */
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.46);
+  color: #66816b;
+  font-family: MavenProRegular;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  margin-top: 30px;
+  margin-left: 4px;
+}
+
+.tbttn1 {
+	background-color: rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.51), inset 0 0 4px rgba(0, 0, 0, 0.22);
+	color: #68756d;
+}
+
+.tbttn3 {
+  width: 88px;
+}
+
+.tbttn4 {
+  width: 50px;
+}
+
+img.sidebar-post-img {
+	border: 1px solid #7e7c74;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
+	float: left;
+	margin-right: 9px;
+}
+
+
+.sidebar-post-h5 {
+	text-shadow: 0.7px 0.7px 0 rgba(255, 255, 255, 0.82);
+	color: #4a684f;
+	font-family: MavenProRegular;
+	font-size: 15px;
+	font-weight: 400;
+	padding-top: 5px 0px 0px 0px;
+	margin-bottom: 9px;
+}
+
+.sidebar-post-p {
+	text-shadow: 0.7px 0.7px 0 rgba(255, 255, 255, 0.82);
+	color: #776f56;
+	font-family: MavenProRegular;
+	font-size: 11px;
+	font-weight: 400;
+	padding: 0 0 0 0px;
+	margin: 0 0 0 0px;
+}
+
+.sidebar-archive-h3 {
+	width: 111px;
+	height: 19px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.81);
+	color: #4f4c25;
+	font-family: OldStandard;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 46px;
+	text-transform: uppercase;
+	padding-top: 15px;
+}
+
+.sidebar-archive-table {
+  width: 160px;
+	height: 30px;
+	//border-bottom: 1px dotted #aabcab;
+	//box-shadow: 0 1px 0 rgba(255, 255, 255, 0.48);
+	background: url(../img/td-dotted-line.png) bottom repeat-x;
+	display: inline-block;
+}
+
+.sidebar-archive-table.tdright {
+	margin-left: 20px;
+	//background: rgba(50,150,50,0.25);
+}
+
+.sidebar-archive-table a {
+	text-shadow: 0.7px 0.7px 0 white;
+	color: #4a684f;
+	font-family: MavenProRegular;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 20px;
+	text-decoration: none;
+}
+
+/*----------------- FOOTER -----------------*/
+
+.footer {
+	position: absolute;
+	top: 2767px;
+	width: 1600px;
+	//height: 312px;
+  background: url(../img/pattern_3x3px.png) repeat,
+  url(../img/footer-texture.png) bottom no-repeat,
+  linear-gradient(180deg, #e3e8ca 0%, #afc4b8 100%);
+  //z-index: 999;
+}
+
+.footer-box {
+	position: relative;
+	left: 320px;
+	display: inline-block;
+	height: 190px;
+	width: 220px; 
+	//border: 1px dotted #ec5d72;
+	margin-left: 27px;
+	overflow: hidden; //что-то не помещается(что - непонятно), дивы "плывут"
+}
+
+.footer-box:first-child {
+	margin-left: 0px;
+}
+
+.footer-box h3 {
+	text-shadow: 0.7px 0.7px 0 white;
+	color: #4f4c25;
+	font-family: OldStandard;
+	font-size: 24px;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.footer-box ul {
+	padding: 0;
+	margin: 0;
+}
+
+li.footer-subbox {
+	height: 28px;
+	width: 210px;
+	line-height: 28px;
+	list-style: none outside none;
+	border-bottom: 1px dotted #728974;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.57);
+}
+
+li.footer-subbox:last-child {
+	border-bottom: none;
+	box-shadow: none;
+}
+
+.footer-box a {
+	text-shadow: 0.7px 0.7px 0 white;
+	color: #1c692a;
+	font-family: MavenProRegular;
+	font-size: 12px; 
+	font-weight: 400;
+	text-decoration: none;
+}
+
+p.footer-tweet {
+	text-shadow: 0.7px 0.7px 0 white;
+	font-family: MavenProRegular;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #3b3306;
+	margin: 3px 0 12px 0;
+}
+
+p.footer-tweet a {
+	border-bottom: 1px dotted #1c692a;
+}
+
+.footer-subscribenews-form {
+	//border: 1px solid #000;
+}
+
+input.email-input {
+	width: 123px; //155-32=123px
+	height: 32px;
+	background: url(../img/Mail.png) 10px center no-repeat  rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.51), inset 0 0 4px rgba(0, 0, 0, 0.22);
+	border-radius: 20px;
+	/* Text style for "Your email" */
+	text-shadow: 0 1px 0 white;
+	color: #68756d;
+	font-family: MavenProRegular;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 32px;
+	padding-left: 32px;
+	outline: none;
+}
+
+button.subscribenews-button {
+	width: 55px;
+	height: 32px;
+	background-color: rgba(255, 255, 255, 0.1);
+	background-image: linear-gradient(to top, transparent 0%, rgba(255, 255, 255, 0.07) 100%);
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.18), inset 0 2px 0 rgba(255, 255, 255, 0.78);
+	margin: 0;
+	padding: 0;
+	border-radius: 20px;
+	/* Text style for "Add" */
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.81);
+	color: #66816b;
+	font-family: MavenProRegular;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 32px;
+}
+
+#getsocial {
+	margin-top: 28px;
+	padding-top: 0px; 
+	height: 24px;
+	line-height: 24px;
+}
+
+div.footer-social {
+	margin-top: 7px;
+	width: 197px;
+  height: 36px;
+	background: url(../img/social-icons.png);
+}
+
+a.footer-social {
+	display: inline-block;
+	width: 33.7px;
+	height: 32px;
+	border: 2px solid rgba(0,0,0,0);
+	//border-radius: 50%;
+	//margin: 0px;
+	//padding: 0px;
+}
+
+a.footer-social:hover {
+	border: 2px solid #f77;
+}
+
+div.footer-copy {
+	position: relative;
+	left: 320px;
+	width: 960px;
+	height: 37px;
+	line-height: 37px;
+	background: url(../img/copy-2line.png) top repeat-x;
+}
+
+.footer-copy p {
+	text-shadow: 0.7px 0.7px 0 white;
+	font-family: MavenProRegular;
+	font-size: 12px;
+	font-weight: 400;
+  color: #3b3306;
+  margin: 0 auto;
+}
+
+.footer-copy a {
+	color: #1c692a;
+	text-decoration: none;
+}
