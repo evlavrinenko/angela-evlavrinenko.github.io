@@ -5,24 +5,40 @@
   src: local("#@^^%$"), url(../fonts/MavenProRegular.woff) format("woff"), url(../fonts/MavenProRegular.ttf) format("truetype"), url(../fonts/MavenProRegular.svg) format("svg");
   font-weight: normal;
   font-style: normal; }
+/*
 @font-face {
-  font-family: MavenProBold;
-  src: url(../fonts/MavenProBold.eot);
-  src: local("#@^^%$"), url(../fonts/MavenProBold.woff) format("woff"), url(../fonts/MavenProBold.ttf) format("truetype"), url(../fonts/MavenProBold.svg) format("svg");
-  font-weight: 800;
-  font-style: bold; }
+	font-family: MavenProBold;
+	src: url(../fonts/MavenProBold.eot); // ╨┤╨╗╤П IE
+	src: local("#@^^%$"), // ╨┤╨╗╤П ╨┐╤А╨╡╨┤╨╛╤В╨▓╤А. ╤Б╨▒╨╛╤П ╨┐╤А╨╕ ╨╖╨░╨│╤А╤Г╨╖╨║╨╡ ╤И╤А╨╕╤Д╤В╨░ ╤Б ╨╗╨╛╨║. ╨║╨╛╨╝╨┐.
+	url(../fonts/MavenProBold.woff) format("woff"),
+	url(../fonts/MavenProBold.ttf) format("truetype"),
+	url(../fonts/MavenProBold.svg) format("svg");
+	font-weight: 800;
+	font-style: bold;
+}
+
 @font-face {
-  font-family: MavenProMedium;
-  src: url(../fonts/MavenProMedium.eot);
-  src: local("#@^^%$"), url(../fonts/MavenProMedium.woff) format("woff"), url(../fonts/MavenProMedium.ttf) format("truetype"), url(../fonts/MavenProMedium.svg) format("svg");
-  font-weight: 400;
-  font-style: normal; }
+	font-family: MavenProMedium;
+	src: url(../fonts/MavenProMedium.eot); // ╨┤╨╗╤П IE
+	src: local("#@^^%$"), // ╨┤╨╗╤П ╨┐╤А╨╡╨┤╨╛╤В╨▓╤А. ╤Б╨▒╨╛╤П ╨┐╤А╨╕ ╨╖╨░╨│╤А╤Г╨╖╨║╨╡ ╤И╤А╨╕╤Д╤В╨░ ╤Б ╨╗╨╛╨║. ╨║╨╛╨╝╨┐.
+	url(../fonts/MavenProMedium.woff) format("woff"),
+	url(../fonts/MavenProMedium.ttf) format("truetype"),
+	url(../fonts/MavenProMedium.svg) format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+
 @font-face {
-  font-family: JaneAusten;
-  src: url(../fonts/JaneAusten.eot);
-  src: local("#@^^%$"), url(../fonts/JaneAusten.woff) format("woff"), url(../fonts/JaneAusten.ttf) format("truetype"), url(../fonts/JaneAusten.svg) format("svg");
-  font-weight: normal;
-  font-style: normal; }
+	font-family: JaneAusten;
+	src: url(../fonts/JaneAusten.eot); // ╨┤╨╗╤П IE
+	src: local("#@^^%$"), // ╨┤╨╗╤П ╨┐╤А╨╡╨┤╨╛╤В╨▓╤А. ╤Б╨▒╨╛╤П ╨┐╤А╨╕ ╨╖╨░╨│╤А╤Г╨╖╨║╨╡ ╤И╤А╨╕╤Д╤В╨░ ╤Б ╨╗╨╛╨║. ╨║╨╛╨╝╨┐.
+	url(../fonts/JaneAusten.woff) format("woff"),
+	url(../fonts/JaneAusten.ttf) format("truetype"),
+	url(../fonts/JaneAusten.svg) format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+*/
 @font-face {
   font-family: OldStandard;
   src: url(../fonts/OldStandard.eot);
