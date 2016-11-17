@@ -2,20 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!--For mobile devices-->
 	<title>Angela pixel artist</title>
 	<script src="js/jquery-1.4.4.min.js"></script>
 	<script src="js/slides.min.jquery.js"></script>
-	<script>
-		$(function(){
-			$('#slides').slides({
-				preload: true,
-				preloadImage: 'img/loading.gif',
-				play: 5000,
-				pause: 2500,
-				hoverPause: true
-			});
-		});
-	</script>
 	<link rel="stylesheet" href="scss/main.css" media="screen">
 </head>
 <body>
@@ -28,9 +18,9 @@
 			<li class="nav-item"><a href="#" class="nav-item" id="nav-blog">blog</a>
 				<div class="dropdownContain">
 					<ul class="nav-submenu">
-						<li class="nav-submenu-item"><a href="#" class="nav-submenu-item">Aaaaaaaa aaaa aaaa</a></li>
-						<li class="nav-submenu-item"><a href="#" class="nav-submenu-item">Bbbbbbb bbbbbbbb bbbbbbb</a></li>
-						<li class="nav-submenu-item"><a href="#" class="nav-submenu-item">C ccc cccccccccc cc ccc</a></li>
+						<li class="nav-submenu-item"><a href="#" class="nav-submenu-item">the creation of adam</a></li>
+						<li class="nav-submenu-item"><a href="#" class="nav-submenu-item">how to draw a human body</a></li>
+						<li class="nav-submenu-item"><a href="#" class="nav-submenu-item">classic art in the st. peter’s basilica</a></li>
 					</ul>
 				</div>
 			</li>
@@ -273,5 +263,16 @@
 	</div>
 	<!-- END  FOOTER -->
 </div>
+<script>
+		$(function(){
+			$('#slides').slides({
+				preload: true,
+				preloadImage: 'img/loading.gif',
+				play: 5000,
+				pause: 2500,
+				hoverPause: true
+			});
+		});
+	</script>
 </body>
 </html>

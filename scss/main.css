@@ -5,40 +5,6 @@
   src: local("#@^^%$"), url(../fonts/MavenProRegular.woff) format("woff"), url(../fonts/MavenProRegular.ttf) format("truetype"), url(../fonts/MavenProRegular.svg) format("svg");
   font-weight: normal;
   font-style: normal; }
-/*
-@font-face {
-	font-family: MavenProBold;
-	src: url(../fonts/MavenProBold.eot); // ╨┤╨╗╤П IE
-	src: local("#@^^%$"), // ╨┤╨╗╤П ╨┐╤А╨╡╨┤╨╛╤В╨▓╤А. ╤Б╨▒╨╛╤П ╨┐╤А╨╕ ╨╖╨░╨│╤А╤Г╨╖╨║╨╡ ╤И╤А╨╕╤Д╤В╨░ ╤Б ╨╗╨╛╨║. ╨║╨╛╨╝╨┐.
-	url(../fonts/MavenProBold.woff) format("woff"),
-	url(../fonts/MavenProBold.ttf) format("truetype"),
-	url(../fonts/MavenProBold.svg) format("svg");
-	font-weight: 800;
-	font-style: bold;
-}
-
-@font-face {
-	font-family: MavenProMedium;
-	src: url(../fonts/MavenProMedium.eot); // ╨┤╨╗╤П IE
-	src: local("#@^^%$"), // ╨┤╨╗╤П ╨┐╤А╨╡╨┤╨╛╤В╨▓╤А. ╤Б╨▒╨╛╤П ╨┐╤А╨╕ ╨╖╨░╨│╤А╤Г╨╖╨║╨╡ ╤И╤А╨╕╤Д╤В╨░ ╤Б ╨╗╨╛╨║. ╨║╨╛╨╝╨┐.
-	url(../fonts/MavenProMedium.woff) format("woff"),
-	url(../fonts/MavenProMedium.ttf) format("truetype"),
-	url(../fonts/MavenProMedium.svg) format("svg");
-	font-weight: 400;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: JaneAusten;
-	src: url(../fonts/JaneAusten.eot); // ╨┤╨╗╤П IE
-	src: local("#@^^%$"), // ╨┤╨╗╤П ╨┐╤А╨╡╨┤╨╛╤В╨▓╤А. ╤Б╨▒╨╛╤П ╨┐╤А╨╕ ╨╖╨░╨│╤А╤Г╨╖╨║╨╡ ╤И╤А╨╕╤Д╤В╨░ ╤Б ╨╗╨╛╨║. ╨║╨╛╨╝╨┐.
-	url(../fonts/JaneAusten.woff) format("woff"),
-	url(../fonts/JaneAusten.ttf) format("truetype"),
-	url(../fonts/JaneAusten.svg) format("svg");
-	font-weight: normal;
-	font-style: normal;
-}
-*/
 @font-face {
   font-family: OldStandard;
   src: url(../fonts/OldStandard.eot);
@@ -60,14 +26,19 @@
 ::-ms-input-placeholder {
   color: #68756d; }
 
+html, body, header, #bg {
+  width: 1600px; }
+
 body {
   margin: 0px;
   padding: 0px; }
 
+a, button {
+  cursor: pointer; }
+
 #bg {
   margin: 0px;
   padding: 0px;
-  width: 1600px;
   height: 3000px;
   background: url(../img/pattern_3x3px.png) repeat #e3e8ca; }
 
@@ -102,6 +73,7 @@ header {
   position: relative;
   left: 617px;
   top: 216px;
+  width: 980px;
   clear: both;
   list-style: none outside none;
   padding: 0px;
